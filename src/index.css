@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+textarea {
+  /* Base styles for the container */
+  overflow-y: hidden; /* Hide scrollbar initially */
+  position: relative; /* Required for :hover pseudo-class */
+}
+
+textarea,
+.todo-scrollbar:hover {
+  /* Styles applied on hover */
+  overflow-y: auto; /* Enable scrollbar on hover */
+}
+
+/* Optional scrollbar styling (customize to your preference) */
+textarea::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  animation: all 0.7s ease-out;
+  background-color: rgba(20, 20, 29, 0.959);
+  border-radius: 5px;
+}
+
+.todo-scrollbar {
+  /* Base styles for the container */
+  overflow-y: scroll; /* Hide scrollbar initially */
+}
+
+.todo-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+.todo-scrollbar::-webkit-scrollbar-thumb {
+  animation: all 0.7s ease-out;
+  background-color: rgba(82, 82, 82, 0.959);
+  border-radius: 5px;
+}
+
+.note-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease-in-out 0.5s;
+}
+
+.three-dot-context {
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
